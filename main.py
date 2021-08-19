@@ -63,7 +63,7 @@ def main():
     x1 = [] # no. of elements to sort
     y1 = [] # time for quick sort
     y2 = [] # time for merge sort
-    for i in range(10, 1000, 10):
+    for i in range(1, 10000, 100):
         data1 = data2 = rand_gen(i)
         x1.append(i)
         # quick sort
@@ -79,12 +79,10 @@ def main():
         y2.append(end_t2-start_t2)
 
     # plotting graph
-    
+    plt.plot(x1,y1, label = "quick sort")
+    plt.plot(x1,y2, label = "merge sort")
+    plt.legend()
+    plt.show()
 
 if __name__ == "__main__":
     main()
-
-# plt.plot(x1,y1)
-# print(y1)
-# print(sum(y1))
-# plt.show()
