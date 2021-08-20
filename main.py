@@ -9,6 +9,7 @@ def rand_gen(quantity):
         l.append(x)
     return l
 
+# partition funciton for quick sort
 def partition(data, lb, ub):
     p = data[lb]
     i = lb + 1
@@ -27,8 +28,8 @@ def partition(data, lb, ub):
 def quick_sort(data, lb, ub):
     if lb < ub:
         p = partition(data, lb, ub)
-        quick_sort(data, lb, p-1)
-        quick_sort(data, p+1, ub)
+        quick_sort(data, lb, p-1) # perform quick sort on left half
+        quick_sort(data, p+1, ub) # perform quick sort on right half
 
 def merge_sort(data):
     if len(data) > 1:
