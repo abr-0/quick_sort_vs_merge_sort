@@ -6,3 +6,5 @@ Requirements:
 - python 3
 - matplotlib
 ```
+### Screenshot
+![Graph](graph.png)
